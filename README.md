@@ -3,6 +3,21 @@ Bootstrap is a toolkit from Twitter designed to kickstart development of webapps
 
 twitter-bootstrap-rails project integrates Bootstrap CSS toolkit for Rails 3.1 Asset Pipeline (Rails 3.2 supported)
 
+## Hey, Jake made his own changes!
+
+1. HTML5 Shim documents it should be loaded AFTER the CSS.
+2. Twitter documents tooltip and popovers should be opt-in only
+3. Assets live in /assets/foo, not /images/foo.
+4. Copyright year is Time.now.year, not 2012.
+5. bootstrap_and_overrides should be _bootstrap.css.less
+6. Removing Breadcrumbs helper partial for now, because thats where the syntax error on 1.8.7 is.
+
+### Some other changes we need to make.
+
+1. Bootstrap.js should be written to app assets so user can customize what parts are included by default. Not everyone needs the entire set.
+
+2. The installable Gem has Ruby 1.9 syntax that dies on 1.8.7. But it's not in the repo. We shouldn't be using 1.9 syntax that is not backwards compatible until 1.9 is an official release. Aka 2.0.
+
 [![Build Status](https://secure.travis-ci.org/seyhunak/twitter-bootstrap-rails.png)](http://travis-ci.org/seyhunak/twitter-bootstrap-rails)
 [![Dependency Status](https://gemnasium.com/seyhunak/twitter-bootstrap-rails.png)](https://gemnasium.com/seyhunak/twitter-bootstrap-rails)
 
