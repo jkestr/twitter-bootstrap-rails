@@ -31,8 +31,10 @@ module Bootstrap
       end
 
       def add_bootstrap
-        copy_file "bootstrap.coffee", "app/assets/javascripts/bootstrap.js.coffee"
-        copy_file "bootstrap_and_overrides.less", "app/assets/stylesheets/bootstrap_and_overrides.css.less"
+        # Twitter's own documentation says this is intensive and should only be run if you need it.
+        # So lets not install it by default.
+        #copy_file "bootstrap.coffee", "app/assets/javascripts/bootstrap.js.coffee"
+        copy_file "bootstrap.less", "app/assets/stylesheets/_bootstrap.css.less"
       end
 
       def cleanup_legacy

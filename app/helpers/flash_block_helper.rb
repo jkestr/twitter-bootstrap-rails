@@ -1,4 +1,5 @@
 module FlashBlockHelper
+  
   def flash_block
     output = ''
     flash.each do |type, message|
@@ -14,4 +15,5 @@ module FlashBlockHelper
       message
     end)
   end
+  
 end
